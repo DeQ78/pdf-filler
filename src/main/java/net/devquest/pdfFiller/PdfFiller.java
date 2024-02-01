@@ -10,7 +10,16 @@ public class PdfFiller {
 	protected static void run() {
 		System.out.println("Hello World!");
 		
-		LocalResource localResource = new LocalResource(System.getProperty("user.home"));
-		System.out.println("localResource = " + localResource.getMountPoint());		
+		try {
+			LocalResource localResource = new LocalResource(System.getProperty("user.home"));
+			System.out.println("localResource = " + localResource.getMountPoint());
+			
+			localResource.readDirectory();
+			
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+		}
+		
+		
 	}
 }
