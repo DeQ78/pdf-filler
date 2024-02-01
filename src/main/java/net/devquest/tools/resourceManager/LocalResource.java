@@ -1,6 +1,9 @@
 package net.devquest.tools.resourceManager;
 
+import java.io.Console;
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.nio.file.FileSystem;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -32,6 +35,25 @@ public class LocalResource implements IResourceManager {
 
 		if (Files.exists(pDir) && Files.isDirectory(pDir)) {
 			System.out.println("dir path Exists = " + strDir);
+			
+			Console cons;
+			cons = System.console();
+			Charset charset = cons.charset();
+			System.out.println("charset.name() = " + charset.name());
+			System.out.println("charset.toString() = " + charset.toString());
+			System.out.println("charset.displayName() = " + charset.displayName());
+			
+
+//			final String encoding = "UTF-8"; // "UTF16LE" or "UTF-16BE"
+//			byte[] b;
+//			try {
+//				b = strDir.getBytes(encoding);
+//				System.out.println("dir path Exists = " + b);
+//			} catch (UnsupportedEncodingException e) {
+//				e.printStackTrace();
+//			}
+			
+			
 //			FileSystem strSysDir = pDir.getFileSystem();			
 			
 //			for (final File fileEntry : folder.listFiles()) {
