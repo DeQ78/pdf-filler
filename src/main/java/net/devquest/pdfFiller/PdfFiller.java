@@ -4,10 +4,10 @@ import net.devquest.tools.resourceManager.LocalResource;
 
 public class PdfFiller {
 	public static void main(String[] args) {
-		run();
+		runme();
 	}
 
-	protected static void run() {
+	protected static void runme() {
 		System.out.println("Hello World!");
 		
 		try {
