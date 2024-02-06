@@ -38,10 +38,13 @@ public class LocalResource implements IResourceManager {
 			
 			Console cons;
 			cons = System.console();
-			Charset charset = cons.charset();
-			System.out.println("charset.name() = " + charset.name());
-			System.out.println("charset.toString() = " + charset.toString());
-			System.out.println("charset.displayName() = " + charset.displayName());
+			if (cons != null) {
+				Charset charset = cons.charset();
+				System.out.println("charset.name() = " + charset.name());
+				System.out.println("charset.toString() = " + charset.toString());
+				System.out.println("charset.displayName() = " + charset.displayName());
+				
+			}
 			
 
 //			final String encoding = "UTF-8"; // "UTF16LE" or "UTF-16BE"

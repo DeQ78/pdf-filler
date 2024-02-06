@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class PdfFillerTest {
 
 	@Test
-	void run() {
+	public void run() {
 		assumeTrue(true);
 	}
 
