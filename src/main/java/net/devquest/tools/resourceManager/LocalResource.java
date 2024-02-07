@@ -10,20 +10,20 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class LocalResource implements IResourceManager {
-	protected String mountPoint = "";
+	protected String startDir = "";
 	protected String curDir = "";
 
-	public LocalResource(String mountPoint) {
-		this.mountPoint = mountPoint;
-		this.curDir = mountPoint;
+	public LocalResource(String startDir) {
+		this.startDir = startDir;
+		this.curDir = startDir;
 	}
 
-	public String getMountPoint() {
-		return this.mountPoint;
+	public String getStartDir() {
+		return this.startDir;
 	}
 
-	public void setMountPoint(String mountPoint) {
-		this.mountPoint = mountPoint;
+	public void setStartDir(String startDir) {
+		this.startDir = startDir;
 	}
 
 	public void readDirectory() {

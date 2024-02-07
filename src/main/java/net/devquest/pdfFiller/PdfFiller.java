@@ -12,7 +12,7 @@ public class PdfFiller {
 		
 		try {
 			LocalResource localResource = new LocalResource(System.getProperty("user.home"));
-			System.out.println("localResource = " + localResource.getMountPoint());
+			System.out.println("localResource = " + localResource.getStartDir());
 			
 			localResource.readDirectory();
 			
